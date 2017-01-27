@@ -2,6 +2,12 @@
 // Do a force model that uses length of nodes as est time of delivery to recipients
 var bardata = [];
 
+// For inc excel data
+// CORS issue so disabled for now
+// d3.tsv('data.tsv', function(data){
+
+// })
+
 for (var i=0; i < 50; i++) {
     bardata.push(Math.round(Math.random()*100)+10)
 }

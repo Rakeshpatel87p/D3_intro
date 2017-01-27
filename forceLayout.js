@@ -1,5 +1,5 @@
 var w = 900,
-    h = 400;
+    h = 500;
 
 var circleWidth = 5;
 
@@ -142,8 +142,6 @@ node.append("text")
     .text(function(d) {
         return d.name;
     })
-    // .attr("x",            function(d, i) { if (i>0) { return circleWidth + 5; }   else { return -10 } })
-    // .attr("y",            function(d, i) { if (i>0) { return circleWidth + 0 }    else { return 8 } })
     .attr("fill", palette.red)
     .attr("font-size", function(d, i) {
         if (i > 0) {
