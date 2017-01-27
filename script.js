@@ -1,3 +1,5 @@
+// Inc new data stream for Home Depot relevent info i.e. sales over time
+// Do a force model that uses length of nodes as est time of delivery to recipients
 var bardata = [];
 
 for (var i=0; i < 50; i++) {
