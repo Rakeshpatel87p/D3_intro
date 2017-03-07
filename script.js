@@ -1,13 +1,18 @@
-// Inc new data stream for Home Depot relevent info i.e. sales over time
-// Do a force model that uses length of nodes as est time of delivery to recipients
 var bardata = [];
 
 // For inc excel data
 // CORS issue so disabled for now
-d3.tsv('data.tsv', function(data){
-    bardata.sort(function compareNumbers(a,b) {
-    return a -b;
-});
+// d3.tsv('data.tsv', function(data){
+
+// });
+
+for(var i = 0; i < 50; i++){
+    bardata.push(Math.floor(Math.random() * 10)+ 1)
+}
+
+// bardata.sort(function compareNumbers(a,b) {
+//     return a -b;
+// });
 
 var margin = { top: 30, right: 30, bottom: 40, left:50 }
 
@@ -120,9 +125,3 @@ var hGuide = d3.select('svg').append('g')
         .style({ fill: 'none', stroke: "#000"})
     hGuide.selectAll('line')
         .style({ stroke: "#000"})
-
-})
-
-// for (var i=0; i < 50; i++) {
-//     bardata.push(Math.round(Math.random()*100)+10)
-// }
