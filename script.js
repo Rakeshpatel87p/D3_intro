@@ -4,15 +4,8 @@ var bardata = [];
 
 // For inc excel data
 // CORS issue so disabled for now
-// d3.tsv('data.tsv', function(data){
-
-// })
-
-for (var i=0; i < 50; i++) {
-    bardata.push(Math.round(Math.random()*100)+10)
-}
-
-bardata.sort(function compareNumbers(a,b) {
+d3.tsv('data.tsv', function(data){
+    bardata.sort(function compareNumbers(a,b) {
     return a -b;
 });
 
@@ -127,3 +120,9 @@ var hGuide = d3.select('svg').append('g')
         .style({ fill: 'none', stroke: "#000"})
     hGuide.selectAll('line')
         .style({ stroke: "#000"})
+
+})
+
+// for (var i=0; i < 50; i++) {
+//     bardata.push(Math.round(Math.random()*100)+10)
+// }
